@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="styles/main.scss">
     <!-- endbuild -->
   </head>
-  <body ng-controller="MainCtrl">
-
+  <body ng-controller="MainCtrl" style="padding-top: 5em">
+    <nav class="navbar navbar-default navbar-fixed-top container-fluid" >
+    	<ng-include src="'views/partials/header.html'"></ng-include>
+    </nav>
     <!-- main view -->
     <div id="main-content" class="container-fluid" ng-view=""></div>
 
@@ -41,6 +43,7 @@
     <script src="js/app.js"></script><!-- our controller -->
     <script src="js/controllers/main.js"></script>
     <script src="js/controllers/home.js"></script>
+    <script src="js/controllers/about.js"></script>
     <!-- endbuild -->
 
 </body>

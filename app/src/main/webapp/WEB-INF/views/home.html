@@ -4,16 +4,29 @@
   <p> {{list.lname}} </p>
   <button class="btn btn-warning"
     ng-click="changeName()">
-    change name
+    <span class="glyphicon glyphicon-fire"change name</span>
   </button>
   <button class="btn btn-primary"
     ng-click="message()">
-    Tell the future
+    <span class="glyphicon glyphicon-heart"> </span>
   </button>
   <input type="text" ng-model="fish"/>
   <span ng-show="fish=='cat'">This fish is a catfish</span>
   <span ng-show="fish=='dog'">Dogfish are ugly</span>
   <span ng-hide="fish=='cat' || fish=='dog'">{{fish}}</span>
+
+  <div class="row">
+      <div class="col-sm-1">Random
+      </div>
+      <div class="col-sm-2">Text
+      </div>
+      <div class="col-sm-2">Inside
+      </div>
+      <div class="col-sm-6">Each
+      </div>
+      <div class="col-sm-1">Column
+      </div>
+  </div>
   
 
   <div ng-repeat="hob in list.hobbies" class="row">
@@ -31,6 +44,5 @@
       {{n}}
 	<span ng-show="$index==16" class="lead">OMG wat</span>
   </div>
- 
 
 </div>
