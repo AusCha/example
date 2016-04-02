@@ -23,10 +23,20 @@ angular.module('WebApp')
     ]
   }
 
+  $scope.fish = "cat";
+
   // function variable
   $scope.changeName = function() {
     $scope.list.fname = "new fname";
     $scope.list.lname = "new lname";
+  }
+
+  $scope.message = function() {
+    if ($scope.fish == "cat") {
+    	$scope.fish = "dog";
+    }
+    else
+    	$scope.fish = "cat";
   }
 
   $scope.getEmployeeNames();

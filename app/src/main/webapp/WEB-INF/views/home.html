@@ -2,12 +2,20 @@
   <p class="lead"> Home View </p>
   <p> {{list.fname}} </p>
   <p> {{list.lname}} </p>
-  <button class="btn btn-default"
+  <button class="btn btn-warning"
     ng-click="changeName()">
     change name
   </button>
+  <button class="btn btn-primary"
+    ng-click="message()">
+    Tell the future
+  </button>
+  <input type="text" ng-model="fish"/>
+  <span ng-show="fish=='cat'">This fish is a catfish</span>
+  <span ng-show="fish=='dog'">Dogfish are ugly</span>
+  <span ng-hide="fish=='cat' || fish=='dog'">{{fish}}</span>
+  
 
-  <!--
   <div ng-repeat="hob in list.hobbies" class="row">
     <div class="col-sm-3">
       {{hob.activity}}
@@ -16,12 +24,13 @@
       </span>
     </div>
   </div>
-  -->
 
   {{emp.name}}
 
-  <div ng-repeat="n in emp.name">
+  <div ng-repeat="n in emp.name track by $index">
       {{n}}
+	<span ng-show="$index==16" class="lead">OMG wat</span>
   </div>
+ 
 
 </div>
